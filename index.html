@@ -37,6 +37,68 @@
     <div class="Answer">
 
     </div>
+    
+
+    <h3>Q.5 Explain var, let and const? </h3>
+    <div class="Answer">
+        <b>Var:- </b> Variables declared with var-keyword are only accessible in the function-scope. Re-assigning a value of a variable is allowed. Re-declaration of similar identifiers is allowed.
+
+        <pre>           
+            // block-scope
+            if (true) { 
+                var a = 10;
+            }
+            console.log(a); // accessible outside block-scope
+
+            // function-scope
+            function demo () {  
+                var b = 20;
+                console.log(b); // accessible within function-scope
+            }
+            demo(); // function invoked
+            // console.log(b); // refernece-error 
+        </pre>
+
+        <b>let:- </b>Variables declared with let-keyword are only accessible in block-scope. Re-assigning a value of a variable is allowed.But Re-declaration of similar identifiers is not allowed.
+        <pre>
+            // block-scope
+            if (true) { 
+                let a = 10;     
+                a = 20;         // Re-Assignment to let variable applicable
+                let a = 20;     // syntax-error (Identifier 'a' has already been declared)
+                
+            }
+            console.log(a);     // refernece-error (a is not defined)
+        </pre>
+
+
+        <b>const:- </b>Variables declared with const-keyword are only accessible in the block-scope. Re-assigning a value of a variable is not allowed. Re-declaration of similar identifiers is also not allowed.
+
+        <pre>
+            // block-scope
+            if (true) { 
+                const a = 10; 
+                a = 20;         // type-error (Re-Assignment to constant variable)
+                const a = 20;   // syntax-error (Identifier 'a' has already been declared)
+                console.log(a); // accessible within block-scope
+            }
+            console.log(a);     // refernece-error (a is not defined)
+        </pre>
+         
+
+
+    </div>
+
+    <h3>Q.6 What is Hoisting?</h3>
+    <div class="Answer">
+        Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution. Remember that JavaScript only hoists declarations, not initialisation. <br>
+        In JavaScript, Hoisting is the default behavior of moving all the declarations at the top of the scope before code execution. Basically, it gives us an advantage that no matter where functions and variables are declared, they are moved to the top of their scope regardless of whether their scope is global or local.
+    </div>
+
+    <h3>Q.7 What is Temporal Dead Zone?</h3>
+    <div class="Answer">
+        The let and const variables are not accessible before they are initialized with some value, and the phase between the starting of the execution of block in which the let or const variable is declared till that variable is being initialized is called Temporal Dead Zone for the variable
+    </div>
 
     
 
