@@ -35,7 +35,32 @@
 
     <h3>Q.4 What is Execution in Javascript?</h3>
     <div class="Answer">
+        Each execution context has two phases:- 
+        <ol>
+            <li>The creation phase</li>
+            <li>The execution phase</li>
+        </ol>
 
+        <ol>
+            <li><b>Creation phase :</b>
+                When the JavaScript engine executes a script for the first time, it creates the global execution context. <br> During this phase, the JavaScript engine performs the following tasks:
+                <ul>
+                    <li>Create the global object i.e., window in the web browser or global in Node.js.</li>
+                    <li>Create the this object and bind it to the global object.</li>
+                    <li>Setup a memory heap for storing variables and function references.</li>
+                    <li>Store the function declarations in the memory heap and variables within the global execution context with the initial values as undefined.</li>
+                </ul>
+                After the creation phase, the global execution context moves to the execution phase.
+            </li> <br>
+
+
+            <li><b>Execution phase :</b>
+                During the execution phase, the JavaScript engine executes the code line by line, assigns the values to variables, and executes the function calls. <br>
+                For each function call, the JavaScript engine creates a new function execution context.
+            
+            </li>
+
+        </ol>
     </div>
     
 
@@ -98,6 +123,15 @@
     <h3>Q.7 What is Temporal Dead Zone?</h3>
     <div class="Answer">
         The let and const variables are not accessible before they are initialized with some value, and the phase between the starting of the execution of block in which the let or const variable is declared till that variable is being initialized is called Temporal Dead Zone for the variable
+    </div>
+
+    <h3>Q.8 What are closures?</h3>
+    <div class="Answer">
+        A "closure" is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
+        <br>
+        In other words we can say that closure is the combination of inner function and lexical environment, which is created through the help of outer function. That means when we create a parent function and inside of that function when we create an inner function then that inner function can access its parent function or outer function’s variable through the help of lexical environment.
+
+
     </div>
 
     
